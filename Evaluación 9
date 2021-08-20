@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main(void){
+  int numero, cociente, divisor, contador;
+  cociente = 0;
+  divisor = 1;
+  contador = 0;
+  printf("Ingresa el numero: ");
+  scanf("%d", &numero);
+  while (cociente !=1){
+    contador++;
+    divisor = divisor * 10;
+    cociente = numero / divisor;
+    if (cociente == 1){
+      printf("El numero tiene %d digitos\n", contador + 1);
+    }
+    if (cociente < 1){
+      printf("El numero tiene %d digitos\n", contador);
+      cociente = 1;
+    }
+    if (numero < 10){
+        printf("El numero solamente tiene un digito\n");
+    }
+  }
+return 0;
+}
